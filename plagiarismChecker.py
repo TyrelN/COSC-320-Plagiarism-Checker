@@ -121,11 +121,16 @@ def RBKCheck(pat, txt, q):# q must be a prime number
 
 
 #here is where the main program will run
-
 print("here is the current directory: " + os.getcwd())
 
-file1 = open("example.txt", "r")
+testedfile = open("example.txt", "r")
+testfile = open("test.txt", "r")
 
-text = file1.read() #this text file now holds the entire string from example.txt
+text1 = testedfile.read()  # this text file now holds the entire string from example.txt
+text2 = testedfile.read()
+print(text1)
 
-print(text)
+time_start=time.time()
+
+time_end=time.end()
+print('Then cost is ',time_end-time_start,'s' )
