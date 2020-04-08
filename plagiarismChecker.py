@@ -13,18 +13,21 @@ def KMPCheck(pat, txt):
     N = len(txt)
 
     #longest prefix suffix:
-    lps = [0]*M
-    j = 0 #pattern index
+     kmpcounter = 0
+    # longest prefix suffix:
+    lps = [0] * M
+    j = 0  # pattern index
 
     computeLPSArray(pat, M, lps)
 
-    i=0; #txt index
+    i = 0;  # txt index
     while i < N:
         if pat[j] == txt[i]:
             i += 1
             j += 1
         if j == M:
-            print("Found pattern at index" + str(i-j))
+            kmpcounter+=1
+            print("Found pattern at index" + str(i - j))
         elif i < N and pat[j] != txt[i]:
             if j != 0:
                 j= lps[j-1]
@@ -134,3 +137,11 @@ time_start=time.time()
 
 time_end=time.end()
 print('Then cost is ',time_end-time_start,'s' )
+print("here is the current directory: " + os.getcwd())
+
+
+
+txt = "ABABDABACDABABCABAB"
+pat = "ABABCABAB"
+print(KMPCheck(pat, txt)+1)
+print(KMPCheck(pat, txt))
