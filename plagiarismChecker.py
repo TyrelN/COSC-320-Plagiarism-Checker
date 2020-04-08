@@ -49,6 +49,22 @@ def computeLPSArray(pat, M, lps):
                 lps[i] = 0
                 i += 1
 
+#Run the LCSS algorithm for each paragraph from the test file and existing corpora.
+#Given two sequences, find the length of longest subsequence present in both of them.
+#A subsequence is a sequence that appears in the same relative order, but not necessarily 
+#contiguous. For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”. 
+#https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/               
+
+def lcs(X, Y, m, n): 
+
+    if m == 0 or n == 0: 
+       return 0; 
+    elif X[m-1] == Y[n-1]: 
+       return 1 + lcs(X, Y, m-1, n-1); 
+    else: 
+       return max(lcs(X, Y, m, n-1), lcs(X, Y, m-1, n));                 
+
+
 
 #Now the Rabin-Karp Algorithm, which checks for entire words that match:
 #https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/
