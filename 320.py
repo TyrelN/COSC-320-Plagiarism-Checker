@@ -132,24 +132,8 @@ def RBKCheck(pat, txt, q):  # q must be a prime number
 
 print("here is the current directory: " + os.getcwd())
 
-#
-#print('Then cost is ',time_end-time_start,'s' )
 
-#txt = "AABAACAADAABAABA"
-
-#at="AABA"
-#txt = "GEEKS FOR GEEKS"
-#pat = "GEEK"
 q = 101
-#RBKCheck(pat, txt, q)
-#print(RBKCheck(pat, txt, q))
-#X="AGGTAB"
-#Y="GXTXAYB"
-
-
-#print(KMPCheck(pat, txt))
-#KMPCheck(pat, txt)+1
-#print(KMPCheck(pat, txt))
 
 
 
