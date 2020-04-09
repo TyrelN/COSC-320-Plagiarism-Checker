@@ -137,6 +137,7 @@ q = 101
 
 
 
+
 #first example of input
 time_start=time.time()
 writtenfile = open("example.txt", "r")
